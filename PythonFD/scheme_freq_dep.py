@@ -91,7 +91,6 @@ def update_boundary(ivp, u_next, u, u_prev, t):
 def update_impedance_plate(ivp, u_next, u, u_prev, t, wall, plate_params):
     dt = ivp.dt
     h = ivp.h
-    scale_factor = -dt
     SER = plate_params['SER']
     psi_array = plate_params['psi']
     Phi = plate_params['Phi']
@@ -119,9 +118,8 @@ def update_impedance_plate(ivp, u_next, u, u_prev, t, wall, plate_params):
         psi_array[:, i] = psi_new
 
         ser_output = np.squeeze(np.dot(SER['C'], psi_new)) + SER['D'] * v_current
-        correction = scale_factor * ser_output
 
-        u_next[pos] = u[pos] + correction
+        u_next[pos] = u[pos] - dt * ser_output
 
         plate_params['v_prev'][i] = v_current
 
