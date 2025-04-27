@@ -568,7 +568,7 @@ if __name__ == "__main__":
     ax.grid(True)
     plt.show()
 
-    # Run the simulation with sensor logging.
+    # Run the simulation
     u_final, anim, mic_signal, final_time = run_central_diff_scheme(simulation_ivp)
 
     time_array = np.arange(len(mic_signal)) * dt
