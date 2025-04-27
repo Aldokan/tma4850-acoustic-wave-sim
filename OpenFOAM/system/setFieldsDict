@@ -1,0 +1,37 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+
+defaultFieldValues
+(
+    // Set the default pressure to atmospheric pressure (101325 Pa)
+    volScalarFieldValue pa 101325
+);
+
+regions
+(
+    sphereToCell
+    {
+        centre (4 3 0.005);
+        radius 0.5;
+        fieldValues
+        (
+            // Apply a 50 Pa acoustic pulse on top of atmospheric pressure
+            volScalarFieldValue pa 123765
+        );
+    }
+);
+
+// ************************************************************************* //
+

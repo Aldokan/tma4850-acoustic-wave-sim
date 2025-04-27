@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      pa;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 101325;
+
+boundaryField
+{
+
+    reflectingWall
+    {
+        type            zeroGradient;//acousticWaveTransmissive;
+        //advectiveSpeed  50;        // Set to 0 if there is no mean flow
+        //value           uniform 101325;
+    }
+
+    absorbingWall
+    {
+        type            acousticWaveTransmissive;
+        advectiveSpeed  234;        // Set to 0 if there is no mean flow
+        value           uniform 101325;
+    }
+
+    
+    
+    frontAndBack
+    {
+        type empty;
+    }
+    
+}
+
+
+// ************************************************************************* //
