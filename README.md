@@ -95,7 +95,3 @@ tma4850-acoustic-wave-sim
 
 - **Experts in Teamwork** group 6, TMA4850 – Mathematics in Applications.
 
-## License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
