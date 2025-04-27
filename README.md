@@ -14,14 +14,13 @@ Course project for TMA4850: Experts in Teamwork – Mathematics in Applications.
   - [Python Finite-Difference Solver](#python-finite-difference-solver)
 - [Results and Post-Processing](#results-and-post-processing)
 - [Authors](#authors)
-- [License](#license)
 
 ## Overview
 
-This project provides two implementations for simulating acoustic wave propagation:
+This project provides two implementations for simulating acoustic wave propagation and modeling sound dampening plates:
 
-1. **OpenFOAM (finite-volume)** – Finite Volume implementation with mesh algorithm and plate placement algorithm.
-2. **Python FDTD (finite-difference)** – Python finite difference implementation with frequency dependent boundary condition. 
+1. **OpenFOAM (finite-volume)** – Finite Volume implementation with constant acoustic impedance boundary condition, mesh algorithm and plate placement algorithm.
+2. **Python FDTD (finite-difference)** – Python finite difference implementation with frequency dependent boundary condition for acoustic impedance. 
 
 ## Repository Structure
 
