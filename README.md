@@ -27,6 +27,11 @@ This project provides two implementations for simulating acoustic wave propagati
 ```
 tma4850-acoustic-wave-sim
 ├── OpenFOAM/
+│   ├── 0/
+│   ├── 0.orig/
+│   ├── constant/
+│   │   └── polyMesh/
+│   ├── system/
 │   ├── Allrun.sh
 │   ├── master.py
 │   ├── integrated_pressure_new.py
