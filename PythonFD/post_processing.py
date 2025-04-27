@@ -2,7 +2,6 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.signal import spectrogram, butter, sosfilt
 
 # File and constants
 data_file = "mic_response_logMiddle1mCornerGauss01.txt"
